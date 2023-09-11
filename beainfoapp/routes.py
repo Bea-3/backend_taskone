@@ -18,7 +18,7 @@ def current_time():
     random_offset = random.randint(-120, 120)
 
     time_with_offset = current_time + timedelta(seconds=random_offset)
-    return time_with_offset.strftime("%Y-%m-%d %H:%M:%S")
+    return time_with_offset.strftime("%Y-%m-%dT%H:%M:%SZ")
 
 @app.route("/api", methods=['GET'],)
 def user():

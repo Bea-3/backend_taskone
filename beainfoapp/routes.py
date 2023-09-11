@@ -28,14 +28,14 @@ def user():
 
     if slack_name and track:
         user_data = {
-            "slack_name": slack_name,
+            "slack_name": "Bea",
             "current_day": today.strftime('%A'),
             "utc_time": current_time(),
-            "track": track,
-            "github_file_url": "https://github.com/ovidot/Backend-task1/blob/main/main.py",
-            "github_repo_url": "https://github.com/ovidot/Backend-task1",
+            "track": "Backend",
+            "github_file_url": "https://github.com/Bea-3/backend_taskone/blob/main/beainfoapp/routes.py",
+            "github_repo_url": "https://github.com/Bea-3/backend_taskone/tree/main",
             "Status_code": 200
         }
         return jsonify(user_data), 200
     else:
-        return jsonify({"error": "Both slack_name and track parameters are required", "Status_code": 400}), 400
+        return jsonify({"error": "information required", "Status_code": 400}), 400

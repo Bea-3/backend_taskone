@@ -15,9 +15,9 @@ today = datetime.now()
 def current_time():
     current_time = datetime.utcnow()
     # Generate a random offset in seconds (-2 to +2 minutes)
-    random_offset = random.randint(-120, 120)
+    offset = random.randint(-120, 120)
 
-    time_with_offset = current_time + timedelta(seconds=random_offset)
+    time_with_offset = current_time + timedelta(seconds=offset)
     return time_with_offset.strftime("%Y-%m-%dT%H:%M:%SZ")
 
 @app.route("/api", methods=['GET'],)

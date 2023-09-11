@@ -28,10 +28,10 @@ def user():
 
     if slack_name and track:
         user_data = {
-            "slack_name": "Bea",
+            "slack_name": slack_name,
             "current_day": today.strftime('%A'),
             "utc_time": current_time(),
-            "track": "backend",
+            "track": track,
             "github_file_url": "https://github.com/Bea-3/backend_taskone/blob/main/beainfoapp/routes.py",
             "github_repo_url": "https://github.com/Bea-3/backend_taskone/tree/main",
             "Status_code": 200

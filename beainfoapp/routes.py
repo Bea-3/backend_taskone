@@ -20,7 +20,7 @@ def current_time():
     time_with_offset = current_time + timedelta(seconds=random_offset)
     return time_with_offset.strftime("%Y-%m-%d %H:%M:%S")
 
-@app.route("/beainfo", methods=['GET'],)
+@app.route("/api", methods=['GET'],)
 def user():
     args = request.args
     slack_name = args.get("slack_name")
@@ -31,7 +31,7 @@ def user():
             "slack_name": "Bea",
             "current_day": today.strftime('%A'),
             "utc_time": current_time(),
-            "track": "Backend",
+            "track": "backend",
             "github_file_url": "https://github.com/Bea-3/backend_taskone/blob/main/beainfoapp/routes.py",
             "github_repo_url": "https://github.com/Bea-3/backend_taskone/tree/main",
             "Status_code": 200
